@@ -186,17 +186,6 @@ class MainContent(customtkinter.CTkFrame):
         self.company_textbox = customtkinter.CTkTextbox(self.company_entry_frame, corner_radius=CORNER_RADIUS)
         self.company_textbox.grid(row=0,column=0,padx=10,pady=10,sticky='nsew')
 
-        # self.company_check_var = customtkinter.StringVar(value="off")
-        # self.company_checkbox = customtkinter.CTkCheckBox(
-        #     self.company_entry_frame,
-        #     text='done',
-        #     command=lambda: self.checkbox_callback("company", self.company_check_var.get()),
-        #     variable=self.company_check_var,
-        #     onvalue="on",
-        #     offvalue="off"
-        # )
-        # self.company_checkbox.grid(row=2,column=0,padx=10,pady=(0,10),sticky="ew")
-
         # === Job Title Section ===
         self.jobtitle_frame = customtkinter.CTkFrame(self, corner_radius=CORNER_RADIUS)
         self.jobtitle_frame.grid(row=0,column=1,padx=10,pady=10,sticky='nsew')
@@ -219,17 +208,6 @@ class MainContent(customtkinter.CTkFrame):
         self.jobtitle_textbox = customtkinter.CTkTextbox(self.jobtitle_entry_frame, corner_radius=CORNER_RADIUS)
         self.jobtitle_textbox.grid(row=0,column=0,padx=10,pady=10,sticky='nsew')
        
-        # self.jobtitle_check_var = customtkinter.StringVar(value="off")
-        # self.jobtitle_checkbox = customtkinter.CTkCheckBox(
-        #     self.jobtitle_entry_frame,
-        #     text='done',
-        #     command=lambda: self.checkbox_callback("jobtitle", self.jobtitle_check_var.get()),
-        #     variable=self.jobtitle_check_var,
-        #     onvalue="on",
-        #     offvalue="off"
-        # )
-        # self.jobtitle_checkbox.grid(row=2,column=0,padx=10,pady=(0,10),sticky="ew")
-
 
 class SettingsWindow(customtkinter.CTkToplevel):
     def __init__(self, master, *args, **kwargs):
@@ -497,9 +475,6 @@ class App(customtkinter.CTk):
 
         self.script_window.update_companies(len(companies))
         self.script_window.update_titles(len(titles))
-
-        # self.status_queue = queue.Queue()
-        
 
         threading.Thread(
             target=main_script,

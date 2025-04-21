@@ -16,7 +16,6 @@ def main_script(username, password, delay, companies, titles, driver_path, csv_p
     """
     Declare the path and web browser that will be used for conducting searches. 
     """
-    # service = Service(r'C:\Users\AidanShinfeld\Desktop\Scripts\edgedriver_win64\msedgedriver.exe')  # Adjust path as needed
     service = Service(driver_path)
     driver = webdriver.Edge(service=service)
 

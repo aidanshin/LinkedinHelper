@@ -7,6 +7,7 @@ Function that will append data to a csv file
 def dataToCSV(company, data)
 
 Parameters:
+csv_path: CSV Path to the desired location.
 company: Company name 
 data: Data information of candidate that were collected
 """
@@ -29,6 +30,10 @@ def dataToCSV(csv_path, company, data):
 Function that converts csv to excel and organizes the data in columns for each company
 
 def csvToExcel()
+parameters:
+csv_path: CSV Path
+xlsx_path: XLSX Path
+titles: Job Titles
 """
 def csvToExcel(csv_path, xlsx_path, titles):
     wb = Workbook()
