@@ -2,7 +2,6 @@ from linkedin_scraper import *
 from data_handler import *
 import tkinter.messagebox as messagebox
 
-
 def close_script(driver, script_window=None):
     driver.quit()
     if script_window:

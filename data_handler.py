@@ -1,5 +1,6 @@
 import csv
 from openpyxl import Workbook
+import os
 
 """
 Function that will append data to a csv file 
@@ -39,7 +40,7 @@ def csvToExcel(csv_path, xlsx_path, titles):
     wb = Workbook()
     ws = wb.active
 
-    with open(csv_path, 'r') as csvfile:
+    with open(csv_path, 'r', encoding='utf-8', errors='ignore') as csvfile:
         reader = csv.reader(csvfile)
         headers = next(reader)
         

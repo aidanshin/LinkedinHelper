@@ -79,7 +79,7 @@ title: name of position
 company: company's name
 """
 def searchName(driver, title, company):
-    search_string = f"{title} {company}"
+    search_string = f"{title} \"{company}\""
     print(f"Searching for: {search_string}")
 
     try:

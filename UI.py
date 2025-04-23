@@ -426,8 +426,11 @@ class App(customtkinter.CTk):
 
         # === Get input values ===
         delay = round(self.sidebar.delay_slider.get())
-        companies = self.main_content.company_textbox.get("0.0", "end").strip().splitlines()
-        titles = self.main_content.jobtitle_textbox.get("0.0", "end").strip().splitlines()
+        # companies = self.main_content.company_textbox.get("0.0", "end").strip().splitlines()
+        # titles = self.main_content.jobtitle_textbox.get("0.0", "end").strip().splitlines()
+        companies = [line.strip() for line in self.main_content.company_textbox.get("0.0", "end").splitlines() if line.strip()]
+        titles = [line.strip() for line in self.main_content.jobtitle_textbox.get("0.0", "end").splitlines() if line.strip()]
+
 
         # === Validate ===
         if not self.username or not self.password:
